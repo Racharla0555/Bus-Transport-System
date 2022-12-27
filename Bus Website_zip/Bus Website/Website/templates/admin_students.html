@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<!-- #5cb85c -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    {% comment %} <link rel="stylesheet" href=""> {% endcomment %}
+
+
+    <style>
+      a.navbar-brand.h1{
+        margin-left: 1% ;
+        padding: 20px;
+      }
+      li.nav-item.active.p{
+        margin: 5px;
+      }
+      
+      
+      table{
+        border:2px solid black;
+      }
+      tr{
+        border:2px solid black;
+        
+      }
+      td{
+        border:2px solid black;
+        padding: 12px;
+        text-align: center;
+        background-color: #f1f1f1;
+      }
+      th{
+        border:2px solid black;
+        padding: 12px;
+        text-align: center;
+        background-color: lightblue;
+      }
+      h1{
+        margin-top: 30px ;
+      }
+
+      h2{
+        margin-top: 50px ;
+        margin-bottom: 20px ;
+      }
+      
+    </style>
+    
+    <title>Bus Transportation System</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img
+        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/bus-276-356059.png"
+        height="40"
+        width="40"
+      />
+      <a class="navbar-brand h1">Bus Transport Management System</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active p">
+            <a class="nav-link" href="/"> Home </a>
+          </li>
+          
+          <li class="nav-item active p">
+            <a class="nav-link" href="/viewpage">Viewpage</a>
+          </li>
+          <li class="nav-item active p">
+            <a class="nav-link" href="/aupdates">Updates</a>
+          </li>
+          <li class="nav-item active p">
+            <a class="nav-link" href="/query"> Queries </a>
+          </li>
+          <li class="nav-item active p">
+            <a class="nav-link" href="/logout"> Logout </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 style="text-align: center ;">Bus Routes and Student Details</h1>
+
+    <div class="container">
+      
+      {% comment %} <pre> {% endcomment %}
+
+        <h2>Route Number - 1</h2>
+
+        <table>
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list1 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{a}} </p>
+
+
+        <h2>Route Number - 2</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list2 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{b}} </p>
+
+
+        <h2>Route Number - 3</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list3 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{c}} </p>
+
+
+        <h2>Route Number - 4</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list4 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{d}} </p>
+
+
+        <h2>Route Number - 5</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list5 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{e}} </p>
+
+
+        <h2>Route Number - 6</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list6 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{f}} </p>
+
+
+        <h2>Route Number - 7</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list7 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{g}} </p>
+
+        <h2>Route Number - 8</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list8 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{h}} </p>
+
+
+        <h2>Route Number - 9</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list9 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{i}} </p>
+
+
+        <h2>Route Number - 10</h2>
+
+        <table border= "2">
+          <tr>
+            <th>Student Name</th>
+            <th>Mobile Number</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Route Number</th>
+            <th>Location</th>
+          </tr>
+          {% for student in stud_list10 %}
+          <tr text-align='center'>
+            <td> {{ student.fname }} </td>
+            <td> {{ student.number }} </td>
+            <td> {{ student.rollno }} </td>
+            <td> {{ student.email }} </td>
+            <td> {{ student.Branch }} </td>
+            <td> {{ student.rt_number }} </td>
+            <td> {{ student.st_name }} </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p>Number of seats left: {{j}} </p>
+
+      {% comment %} </pre>   {% endcomment %}
+
+      </div>
+      
+
+  </body>
+</html>
